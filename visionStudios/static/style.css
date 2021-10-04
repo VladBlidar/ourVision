@@ -1,0 +1,368 @@
+@font-face {
+    font-family: 'SimplifiedRegular';
+    src: url("/static/simplified.ttf");
+}
+
+@font-face {
+  font-family: 'CochinBold';
+  src: url("/static/CochinBold.ttf");
+}
+
+@font-face {
+  font-family: 'CochinRegular';
+  src: url("/static/CochinRegular.otf");
+}
+
+@font-face {
+  font-family: 'CochinRegular2';
+  src: url("/static/CochinRegular2.ttf");
+}
+
+@font-face {
+  font-family: 'GillSansRegular';
+  src: url("/static/GillSansRegular2.ttf");
+}
+
+@font-face {
+  font-family: 'GillSansLight';
+  src: url("/static/GillSansLight.ttf");
+}
+
+@font-face {
+  font-family: 'BigCaslon';
+  src: url("/static/big-caslon.ttf");
+}
+
+@font-face {
+    font-family: 'BankGothicRegular';
+    src: url("/static/BankGothicRegular.ttf");
+}
+
+@font-face {
+    font-family: "Futura";
+    src: url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.eot"); src: url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.woff") format("woff"), url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.svg#Futura") format("svg");
+}
+
+@font-face {
+  font-family: "FuturaMedium";
+  src: url("/static/FuturaMedium.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("/static/GilroyExtraBold.otf");
+}
+
+.headitem{
+    font-family: Futura;
+    font-size: 2vw;
+    color: #FFFFFF;
+    background-color: Transparent;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    z-index: 10;
+    position: relative;
+}
+
+.m_agency_txt {
+  font-family: BankGothicRegular;
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-size: 1.25vw;
+}
+
+.menuitem{
+  font-family: Futura;
+  border: none;
+  cursor:pointer;
+  outline:none;
+  z-index: 10;
+  position: relative;
+  color: black;
+  float: right;
+  margin-right: 5%;
+  font-size: 1.75vw;
+  transform: translateY(-30%);
+}
+
+.gothic_regular {
+    font-family: BankGothicRegular;
+}
+
+.big_caslon {
+  font-family: BigCaslon;
+}
+
+.gilroy {
+    font-family: Gilroy;
+}
+
+.futura {
+  font-family: Futura;
+}
+
+.futuraMedium {
+  font-family: FuturaMedium;
+}
+
+.simplified {
+  font-family: SimplifiedRegular;
+}
+
+.gillSansRegular {
+  font-family: GillSansRegular;
+}
+
+.gillSansLight {
+  font-family: GillSansLight;
+}
+
+.cochinBold {
+  font-family: CochinBold;
+}
+
+.cochinRegular {
+  font-family: CochinRegular;
+}
+
+.cochinRegular2 {
+  font-family: CochinRegular2;
+}
+
+.welcome_txt {
+  font-family: SimplifiedRegular;
+  font-size: 28vw;
+  /* margin-left: -10vw; */
+  
+  color: #000000;
+  z-index: 11;
+  position: relative;
+}
+
+.find_out_btn {
+    display: inline-block;
+    background-color: #FFFFFF;
+    border: none;
+    color: #000000;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 1%;
+  }
+  
+.find_out_btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.find_out_btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.find_out_btn:hover span {
+  padding-right: 25px;
+}
+
+.find_out_btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.apply_btn {
+    border-radius: 15px;
+    background-color: #121729;
+    font-family: Futura;
+    padding-right: 15%;
+    padding-left: 15%;
+    color: #FFFFFF;
+    font-size: 2.25vw;
+}
+
+.apply_btn:hover span {
+  color: #FFFFFF;
+}
+
+.apply_txt {
+  font-family: Futura;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  font-size: 3vw;
+  color: white;
+  z-index: 10;
+  position: relative;
+  transform: rotate(-90deg);
+  bottom: 0;
+  margin-bottom: 10%;
+}
+
+.catchphrase {
+  font-family: BigCaslon;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 3vw;
+  color: white;
+  z-index: 10;
+  position: relative;
+  margin-top: 2%;
+}
+
+#myTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 2%;
+  right: 30px;
+  z-index: 99;
+  font-size: 2.5vw;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  width:27%;
+  background-color: #FFFFFF;
+  color: black;
+}
+
+#myApplyBtn {
+  display: block;
+  position: fixed;
+  bottom: 1%;
+  z-index: 99;
+  font-size: 2.5vw;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+}
+
+#myCatchPhrase {
+  display: block;
+  position: fixed;
+  right: 30px;
+  z-index: -1;
+  font-size: 2.5vw;
+  border: none;
+  outline: none;
+  color: black;
+}
+
+#myTopBtn:hover {
+  background-color: #121729;
+  color: white;
+}
+
+.first-letter {
+  font-size: 10vw;
+  line-height: 5vw;
+}
+
+.subhead {
+  float: left;
+  width: 0.5em;
+  font-size: 550%;
+  margin-right: 2%;
+  font-family: algerian, courier;
+  line-height: 80%;
+}
+
+.inline-photo {
+  border: 1em solid #fff;
+  border-bottom: 4em solid #fff;
+  border-radius: .25em;
+  box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+  margin: 2em auto;
+  opacity: 0;
+  transform: translateY(4em) rotateZ(-5deg);
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+              opacity .3s .25s ease-out;
+  max-width: 600px;
+  width: 90%;
+  will-change: transform, opacity;
+  }
+
+.inline-photo.is-visible {
+opacity: 1;
+transform: rotateZ(0deg);
+}
+
+
+
+.typed_text {
+  font-size: 28vw;
+  color: black;
+  font-family: SimplifiedRegular;
+}
+
+.typeText::after {
+  content: "|";
+  font-family: monospace;
+  font-family: SimplifiedRegular;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {opacity: 1;}
+  50% {opacity: 0;}
+}
+.modal-backdrop {
+  opacity:0.5 !important;
+}
+
+.underline {
+    position: relative;
+}
+
+.underline:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+.underline:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.underline2 {
+  position: relative;
+}
+
+.underline2:before {
+content: "";
+position: absolute;
+width: 100%;
+margin-left: 30%;
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: black;
+visibility: hidden;
+transform: scaleX(0);
+transition: all 0.3s ease-in-out;
+}
+
+.underline2:hover:before {
+visibility: visible;
+transform: scaleX(1);
+}

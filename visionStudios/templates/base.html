@@ -1,0 +1,68 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- favicon --> 
+    <!-- <link rel="shortcut icon" href="{% static 'favicon.ico' %}" /> -->
+    
+    <!-- reference your installed Font Awesome Free package's files here -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
+
+    <!-- Dropzone js -->
+    <!-- <link rel="stylesheet" href="{% static 'dropzone.css' %}">
+    <script src="{% static 'dropzone.js' %}" defer></script> -->
+
+    <!-- Custom js & css -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    {% block scripts %}
+    {% endblock scripts %}
+    <title>Vision Studios | {% block title %}{% endblock title %}</title>
+  </head>
+  <body>
+    {% comment %} {% include 'navbar.html' %} {% endcomment %}
+    {% block content %}
+    <!-- The Modal -->
+    
+    {% endblock content %}
+    
+    <!-- Bootstrap js -->
+    <script src="{% static 'show-on-scroll.js' %}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js"></script>
+    <script>
+      var shown = false;
+      function close_m() {
+          $('#myModal').modal('hide');
+          Cookies.set('colorboxShown', 'yes', { expires: 1 });
+      }
+      $(document).ready(function(){
+          if (shown === false) {
+            setTimeout(function(){
+              var popupShown = Cookies.get('colorboxShown');
+              if(popupShown){
+                  console.log("Cookie found. No action necessary");
+              } else {
+                  $('#myModal').modal('show');
+                  console.log("Showing modal");
+              }
+            }, 5000);
+          }
+        });
+    </script>
+  </body>
+</html>
