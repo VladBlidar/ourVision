@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 from pathlib import Path
+import dj_database_url
+
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -82,19 +84,7 @@ WSGI_APPLICATION = 'visionStudios.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-   'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-
-            'NAME': 'visionStudios',
-
-            'USER': 'postgres',
-
-            'PASSWORD': 'adminpass',
-
-            'HOST': 'localhost',
-
-            'PORT': '5432',
-        }
+   'default': dj_database_url.parse("postgresql://doadmin:Yl3i7oWZPsJWAbkQ@db-postgresql-fra1-57844-do-user-9931938-0.b.db.ondigitalocean.com:25060/defaultdb?sslmode=require")
 }
 
 
@@ -103,7 +93,7 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'postgresql://doadmin:Yl3i7oWZPsJWAbkQ@db-postgresql-fra1-57844-do-user-9931938-0.b.db.ondigitalocean.com:25060/defaultdb?sslmode=require',
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
