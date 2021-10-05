@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: 'Myriad';
+  src: url("/static/MyriadProRegular.ttf");
+}
+
+@font-face {
   font-family: 'CochinBold';
   src: url("/static/CochinBold.ttf");
 }
@@ -104,6 +109,10 @@
   font-family: Futura;
 }
 
+.myriad {
+  font-family: Myriad;
+}
+
 .futuraMedium {
   font-family: FuturaMedium;
 }
@@ -181,13 +190,13 @@
 }
 
 .apply_btn {
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: #121729;
     font-family: Futura;
     padding-right: 15%;
     padding-left: 15%;
     color: #FFFFFF;
-    font-size: 2.25vw;
+    font-size: 2.0vw;
 }
 
 .apply_btn:hover span {
