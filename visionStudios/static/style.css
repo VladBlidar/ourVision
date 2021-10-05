@@ -281,8 +281,8 @@
 }
 
 .inline-photo {
-  border: 1em solid #fff;
-  border-bottom: 4em solid #fff;
+  border: 1.0vw solid #fff;
+  border-bottom: 2.5vw solid #fff;
   border-radius: .25em;
   box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
   margin: 2em auto;
@@ -293,7 +293,7 @@
   max-width: 600px;
   width: 90%;
   will-change: transform, opacity;
-  }
+}
 
 .inline-photo.is-visible {
 opacity: 1;
