@@ -70,7 +70,7 @@
                 </div>
             </div>
             <div class="row">
-                <div style="margin: 0 auto; width: 40%;">
+                <div class="contactForm">
                     <form method="post" >
                         {% csrf_token %}
                         <div id="div_id_email" class="form-group">
@@ -103,13 +103,13 @@
                         <div class="gillSansRegular mt-3" style="font-size: 2.5vw;">
                             Mail
                         </div>
-                        <a href="mailto:office@visionstudio.ro" style="padding: 0%; text-decoration: none; color: white; font-size: 1.5vw; margin: 0%;"><span class="gillSansLight">office@visionstudio.ro</span></a>
+                        <a href="mailto:office@visionstudio.ro" style="text-decoration: none; color: white; font-size: 1.5vw;"><span class="gillSansLight">office@visionstudio.ro</span></a>
                     </div>
                     <div class="col-6">
-                        <div class="gillSansRegular mt-3" style="font-size: 2.5vw;">Adresa</div>
-                        <p class="gillSansLight" style="margin-top: -1%; padding: 0%; font-size: 1.5vw;">
-                            Str. Vrancea 43C, Etaj 1, Ap. 2, Cluj Napoca
-                        </p>
+                        <div class="gillSansRegular mt-3" style="font-size: 2.5vw;">
+                            Adresa
+                        </div>
+                        <a style="text-decoration: none; color: white; font-size: 1.5vw;"><span class="gillSansLight">Str. Vrancea 43C, Etaj 1, Ap. 2, Cluj Napoca</span></a>
                     </div>
                 </div>
                 <div class="row">
@@ -123,17 +123,19 @@
                         <div class="gillSansRegular mt-3" style="font-size: 2.5vw;">
                             Telefon
                         </div>
-                        <p class="gillSansLight" style="margin-top: -1%; padding: 0%; font-size: 1.5vw;">
-                            0739 692 514
-                        </p>
+                        <a style="text-decoration: none; color: white; font-size: 1.5vw;"><span class="gillSansLight">0739 692 514</span></a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <img src="{% static '/social_logos/insta.png' %}" draggable="false" class="img-fluid" height="50vw" width="50vw" style="float: right;">
+                        <a href="https://www.instagram.com/visionstudioscj/" target="_blank">
+                            <img src="{% static '/social_logos/insta2.png' %}" draggable="false" class="img-fluid" height="auto" width="14%" style="float: right; margin-top: 6%;">
+                        </a>
                     </div>
                     <div class="col-6">
-                        <img src="{% static '/social_logos/fb.png' %}" draggable="false" class="img-fluid" height="50vw" width="50vw" style="float: left;">
+                        <a href="https://www.facebook.com/visionstudioscj" target="_blank">
+                            <img src="{% static '/social_logos/fb.png' %}" draggable="false" class="img-fluid" height="auto" width="25%" style="float: left;">
+                        </a>
                     </div>
                     
                 </div>

@@ -389,6 +389,30 @@ transform: scaleX(1);
   }
 }
 .inline-photo.is-visible {
-opacity: 1;
-transform: rotateZ(0deg);
+  opacity: 1;
+  transform: rotateZ(0deg);
+}
+
+.contactForm {
+  margin: 0 auto;
+  width: 40%;
+}
+
+@media (max-width: 900px) {
+  .contactForm {
+      margin: 0 auto;
+      width: 70%;
+  }
+}
+
+.applyForm {
+  margin: 0 auto;
+  width: 45%;
+}
+
+@media (max-width: 900px) {
+  .applyForm {
+    margin: 0 auto;
+    width: 70%;
+  }
 }

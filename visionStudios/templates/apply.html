@@ -40,7 +40,6 @@
                             <input type="phone" name="phone" maxlength="60" class="form-control" required="" id="id_phone" style="background-color: rgb(209, 209, 209);">
                         </div>
                     </div>
-                
             </div>
             
             <!-- Modal footer -->
@@ -60,13 +59,13 @@
             <pre><p class="futura" style="font-size: 0.75vw; color: #FFFFFF">C L U J    N A P O C A    •    R O M A N I A</p></pre>
             <pre><button class="catchphrase" id="myCatchPhrase" style="font-size: 5vw; color: #6f7070"> We'll show it</button></pre>
             <pre><button class="catchphrase" id="myCatchPhrase" style="transform: translateY(200%) rotate(-90deg); color: black; font-size: 2vw;"> Something special for you</button></pre>
-            <p class="cochinRegular" style="color: white; margin: 5%; margin-bottom: 10%; margin-top: 15%;">
+            <p class="cochinRegular" style="font-size: 1.6vw; color: white; margin: 5%; margin-bottom: 10%; margin-top: 15%;">
                 Aplică pentru un job de model completând formularul din pagină. Te vom contacta telefonic în decursul aceleiași zile pentru a stabili un interviu. <span class="cochinBold">Te rugăm, asigură-te ca ne oferi numărul de telefon corect.</span>
             </p>
-            <p class="cochinRegular" style="color: white; margin: 5%; margin-bottom: 10%;">
+            <p class="cochinRegular" style="font-size: 1.6vw; color: white; margin: 5%; margin-bottom: 10%;">
                 Aplicarea reprezintă doar o intenție din partea ta, nu presupune nicio obligație, fiind doar o ocazie de a ne cunoaște, de a-ți raspunde la întrebari și de a discuta în persoană despre beneficiile unei colaborări cu studioul nostru.
             </p>
-            <p class="cochinRegular" style="color: white; margin: 5%;">
+            <p class="cochinRegular" style="font-size: 1.6vw; color: white; margin: 5%;">
                 Despre un eventual contract vom putea vorbi abia la finalul întrevederii, în cazul în care suntem cu toții multumiți de cele discutate.
             </p>
         </div>
@@ -81,7 +80,7 @@
                 </div>
             </div>
             <div class="row" style="margin-top: -5%;">
-                <div style="margin: 0 auto; width: 45%;">
+                <div class="applyForm">
                     <form method="post">
                         {% csrf_token %}
                         <div id="div_id_name" class="form-group" style="margin-bottom: 8%;">
@@ -132,45 +131,49 @@
                 </div>
             </div>
             <div class="row" style="background-color: #121729; margin-top: 5%; color: white;">
-                <div class="row">
-                    <div class="col-6">
-                        <div class="gillSansRegular mt-3" style="font-size: 2.5vw;">
-                            Mail
+                <div class="row" style="background-color: #121729; margin-top: 5%; color: white;">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="gillSansRegular mt-3" style="font-size: 2.5vw;">
+                                Mail
+                            </div>
+                            <a href="mailto:office@visionstudio.ro" style="text-decoration: none; color: white; font-size: 1.5vw;"><span class="gillSansLight">office@visionstudio.ro</span></a>
                         </div>
-                        <a href="mailto:office@visionstudio.ro" style="padding: 0%; text-decoration: none; color: white; font-size: 1.5vw; margin: 0%;"><span class="gillSansLight">office@visionstudio.ro</span></a>
+                        <div class="col-6">
+                            <div class="gillSansRegular mt-3" style="font-size: 2.5vw;">
+                                Adresa
+                            </div>
+                            <a style="text-decoration: none; color: white; font-size: 1.5vw;"><span class="gillSansLight">Str. Vrancea 43C, Etaj 1, Ap. 2, Cluj Napoca</span></a>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <div class="gillSansRegular mt-3" style="font-size: 2.5vw;">Adresa</div>
-                        <p class="gillSansLight" style="margin-top: -1%; padding: 0%; font-size: 1.5vw;">
-                            Str. Vrancea 43C, Etaj 1, Ap. 2, Cluj Napoca
-                        </p>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="gillSansRegular mt-3" style="font-size: 2.5vw;">
+                                Website
+                            </div>
+                            <a href="/" style="margin-top: -1%; padding: 0%; text-decoration: none; color: white; font-size: 1.5vw;"><span class="gillSansLight">www.visionstudio.ro</span></a>
+                        </div>
+                        <div class="col-6">
+                            <div class="gillSansRegular mt-3" style="font-size: 2.5vw;">
+                                Telefon
+                            </div>
+                            <a style="text-decoration: none; color: white; font-size: 1.5vw;"><span class="gillSansLight">0739 692 514</span></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="https://www.instagram.com/visionstudioscj/" target="_blank">
+                                <img src="{% static '/social_logos/insta2.png' %}" draggable="false" class="img-fluid" height="auto" width="14%" style="float: right; margin-top: 6%;">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="https://www.facebook.com/visionstudioscj" target="_blank">
+                                <img src="{% static '/social_logos/fb.png' %}" draggable="false" class="img-fluid" height="auto" width="25%" style="float: left;">
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="gillSansRegular mt-3" style="font-size: 2.5vw;">
-                            Website
-                        </div>
-                        <a href="/" style="margin-top: -1%; padding: 0%; text-decoration: none; color: white; font-size: 1.5vw;"><span class="gillSansLight">www.visionstudio.ro</span></a>
-                    </div>
-                    <div class="col-6">
-                        <div class="gillSansRegular mt-3" style="font-size: 2.5vw;">
-                            Telefon
-                        </div>
-                        <p class="gillSansLight" style="margin-top: -1%; padding: 0%; font-size: 1.5vw;">
-                            0739 692 514
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <img src="{% static '/social_logos/insta.png' %}" draggable="false" class="img-fluid" height="50vw" width="50vw" style="float: right;">
-                    </div>
-                    <div class="col-6">
-                        <img src="{% static '/social_logos/fb.png' %}" draggable="false" class="img-fluid" height="50vw" width="50vw" style="float: left;">
-                    </div>
-                    
-                </div>
+            </div>
             </div>
         </div>
     </div>
