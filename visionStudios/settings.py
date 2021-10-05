@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 from pathlib import Path
+import sys
 import dj_database_url
 
 
@@ -25,12 +26,12 @@ SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'o@+d5@6345+)9(pl8m^kcy#e2)u-+#c69nh)n&p_j4(40pb#4x'
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '192.168.1.206', 'localhost']
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
 # Application definition
 
@@ -45,6 +46,11 @@ INSTALLED_APPS = [
     'contact',
     'crispy_forms'
 ]
+
+DEBUG = True
+
+DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
+
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -83,9 +89,28 @@ WSGI_APPLICATION = 'visionStudios.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-   'default': dj_database_url.parse("postgresql://doadmin:Yl3i7oWZPsJWAbkQ@db-postgresql-fra1-57844-do-user-9931938-0.b.db.ondigitalocean.com:25060/defaultdb?sslmode=require")
-}
+if DEVELOPMENT_MODE is True:
+    DATABASES = {
+        'default': {
+                    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+                    'NAME': 'visionStudios',
+
+                    'USER': 'postgres',
+
+                    'PASSWORD': 'adminpass',
+
+                    'HOST': 'localhost',
+
+                    'PORT': '5432',
+                }
+        }
+elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
+    if os.getenv("DATABASE_URL", None) is None:
+        raise Exception("DATABASE_URL environment variable not defined")
+    DATABASES = {
+        "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
+    }
 
 
 # Password validation
@@ -93,7 +118,7 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'postgresql://doadmin:Yl3i7oWZPsJWAbkQ@db-postgresql-fra1-57844-do-user-9931938-0.b.db.ondigitalocean.com:25060/defaultdb?sslmode=require',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
