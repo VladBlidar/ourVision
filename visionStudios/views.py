@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from contact.forms import ContactForm
 from contact.models import Message, FloaterMessage, Application
 from contact.forms import FloaterForm, ApplicationForm
+from django.core.mail import send_mail
 
 def homePage(request):
     floaterForm = FloaterForm()
@@ -33,10 +34,40 @@ def submitFloater(request):
                 phone = phone
             )
             msg.save()
+            body = "Email: " + email + "\n\n"
+            body += "Telefon: " + phone + "\n"
+            send_mail(
+                'Cineva doreste sa va contacteze...',
+                body,
+                'visionstudios.office@gmail.com',
+                ['office@visionstudios.ro'],
+                fail_silently=True,
+            )
+            send_mail(
+                'Confirmare Vision Studios',
+                'Mesajul dumneavoastra a fost inregistrat si veti fi contactata in curand!\n\n Toate cele bune,\n Echipa Vision Studios',
+                'visionstudios.office@gmail.com',
+                [email],
+                fail_silently=True,
+            )
     if request.META.get('HTTP_REFERER'):
         return redirect(request.META.get('HTTP_REFERER'))
     else:
         return redirect('/')
+
+levels = [
+            ('', "Nivel limbă engleză"),
+            ('1', 'Începător'),
+            ('2', 'Mediu'),
+            ('3', 'Avansat')
+          ]
+
+experience_lv = [
+            ('', "Experiență"),
+            ('1', 'Nu'),
+            ('2', 'Da, sub 6 luni'),
+            ('3', 'Da, peste 6 luni')
+          ]
 
 def contactPage(request):
     floaterForm = FloaterForm()
@@ -55,6 +86,23 @@ def contactPage(request):
                 message = message
             )
             msg.save()
+            body = "Email: " + email + "\n\n"
+            body += "Nume: " + name + "\n\n"
+            body += "Mesaj: " + message
+            send_mail(
+                'Cineva doreste sa va contacteze...',
+                body,
+                'visionstudios.office@gmail.com',
+                ['office@visionstudios.ro'],
+                fail_silently=True,
+            )
+            send_mail(
+                'Confirmare Vision Studios',
+                'Mesajul dumneavoastra a fost inregistrat si veti fi contactata in curand!\n\n Toate cele bune,\n Echipa Vision Studios',
+                'visionstudios.office@gmail.com',
+                [email],
+                fail_silently=True,
+            )
         return redirect('/')
 
 def applyPage(request):
@@ -83,6 +131,21 @@ def applyPage(request):
                 message = message
             )
             application.save()
-            redirect ('/')
+            body = "Nume: " + name + "\n\n"
+            body += "Telefon: " + phone + "\n\n"
+            body += "Anul nasterii: " + year_of_birth + "\n\n"
+            body += "Nivel limba engleza: " + dict(levels)[english_level] + "\n\n"
+            body += "Experienta: " + dict(experience_lv)[experience] + "\n\n"
+            if message != "":
+                body += "Mesaj: " + message
+
+            send_mail(
+                'APLICATIE NOUA',
+                body,
+                'visionstudios.office@gmail.com',
+                ['office@visionstudios.ro'],
+                fail_silently=True,
+            )
+            return redirect ('/')
         return render(request, "apply.html", {'appForm': appForm, 'flForm' : floaterForm})
 
