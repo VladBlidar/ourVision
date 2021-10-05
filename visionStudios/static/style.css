@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'CochinRegular';
-  src: url("/static/CochinRegular.otf");
+  src: url("/static/Cochin.ttc");
 }
 
 @font-face {
@@ -45,7 +45,7 @@
 
 @font-face {
     font-family: "Futura";
-    src: url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.eot"); src: url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.woff") format("woff"), url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.svg#Futura") format("svg");
+    src: url("/static/Futura.ttc");
 }
 
 @font-face {
@@ -193,8 +193,7 @@
     border-radius: 10px;
     background-color: #121729;
     font-family: Futura;
-    padding-right: 15%;
-    padding-left: 15%;
+    padding-bottom: -5%;
     color: #FFFFFF;
     font-size: 2.0vw;
 }
@@ -343,7 +342,7 @@
 content: "";
 position: absolute;
 width: 100%;
-margin-left: 30%;
+margin-left: 20%;
 height: 2px;
 bottom: 0;
 left: 0;
