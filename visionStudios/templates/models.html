@@ -6,11 +6,72 @@
 {% block content %}
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js"></script>
+    <style>
+        .mobileShow {display: none;} 
+
+        /* Smartphone Portrait and Landscape */ 
+        @media (max-width: 480px) { 
+                .mobileShow {display: inline;}
+        }
+
+        .mobileHide { display: inline; } 
+
+        /* Smartphone Portrait and Landscape */ 
+        @media (max-width: 480px) { 
+            .mobileHide { display: none;}
+        }
+        
+        @media (max-width: 900px) {
+            .inline-photo {
+            border: 0.75vw solid #fff;
+            border-bottom: 1.0vw solid #fff;
+            border-radius: .25em;
+            box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+            margin: 0 0;
+            opacity: 0;
+            transform: translateY(4em) rotateZ(-5deg);
+            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                        opacity .3s .25s ease-out;
+            max-width: 600px;
+            width: 100%;
+            will-change: transform, opacity;
+            }
+            .apply_txt {
+            font-family: Futura;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            font-size: 4.0vw;
+            color: white;
+            z-index: 10;
+            position: relative;
+            transform: rotate(-90deg);
+            bottom: 0;
+            margin-bottom: 20%;
+            margin-left: -25%;
+            }
+            .menuitem{
+                font-family: Futura;
+                border: none;
+                cursor:pointer;
+                outline:none;
+                z-index: 10;
+                position: relative;
+                color: black;
+                float: right;
+                margin-right: 5%;
+                font-size: 2.75vw;
+                transform: translateY(-30%);
+            }
+        }
+        
+    </style>
 </head>
 <div class="modal in" id="myModal">
     <div class="modal-dialog">
         <div class="modal-content">
-
             <!-- Modal Header -->
             <div class="modal-header">
                 <h4 class="modal-title futura">Lasă-ne datele tale de contact și te contactăm noi!</h4>
@@ -46,6 +107,7 @@
         </div>
     </div>
 </div>
+<div class="mobileHide">
     <div class="row h-100" style="overflow: hidden;">
         <button class="futura" onclick="topFunction()" id="myTopBtn" title="Go to top">back to top ────</button>
         <div class="col-3" style="background-color: #121729; text-align: center;">
@@ -119,6 +181,92 @@
                 </div>
                 <div class="col-4" style="transform: translateY(-30%);">
                     <img src="{% static 'modele/m_06.jpg' %}" draggable="false" class="img-fluid inline-photo show-on-scroll" style="margin-left: 5%;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mobileShow">
+    <div class="row h-100" style="overflow: hidden;">
+        <button class="futura" onclick="topFunction()" id="myTopBtn" title="Go to top">back to top ────</button>
+        <div class="col-3" style="background-color: #121729; text-align: center;">
+            <img src="{% static 'vs_title.png' %}" draggable="false" class="img" style="width: 200%;  transform: rotate(-90deg); margin-top: 100%; margin-left: -60%;">
+            <div style="transform: rotate(-90deg); margin-top: -20%; margin-left: -50%; width: 250%;"><pre><p class="futura" style="font-size: 1.25vw; color: #FFFFFF;">C L U J    N A P O C A    •    R O M A N I A</p></pre></div>
+            <pre><button class="apply_txt" id="myApplyBtn" onclick="location.href = '/aplica'" style="font-size: 6.0vw;"> ───  A   P   L   I   C   Ă</button></pre>
+            <pre><button class="catchphrase" id="myCatchPhrase" style="font-size: 5vw; color: #6f7070"> We'll show it</button></pre>
+            <pre><button class="catchphrase" id="myCatchPhrase" style="transform: translateY(200%) rotate(-90deg); color: black; font-size: 2vw;"> Something special for you</button></pre>
+        </div>
+        <div class="col-9" style="text-align: center; overflow: hidden">
+            <div class="row">
+                <pre class="futura" style="font-size: 4.0vw; margin-top: 1%; margin-bottom: 0%; padding-bottom: 0%;">M    O    D    E    L    E</pre>
+                <div>
+                    <pre class="menuitem" onclick="location.href = '/'" style="margin-top: 5%; padding-top: 0%;">
+                        M  E
+                                N  U 
+                    </pre>
+                </div>
+            </div>
+            {% comment %} IMG 1 LEFT {% endcomment %}
+            <div style="transform: translateY(0%);">
+                <div class="row" style="margin-top: 0%;">
+                    <div class="col-6" style="z-index: 1000;">
+                        <img src="{% static 'modele/m_01.jpg' %}" draggable="false" class="img-fluid inline-photo show-on-scroll">
+                    </div>
+                    <div class="col-6" style="margin-left: 0%; margin-top: 10%;">
+                        <p class="myriad" style="font-size: 2.75vw;">Gândește-te cum ar fi să-ți permiți tot ce îți dorești. Vision Studios, cel mai nou, modern si cool studio de modele, te plătește cel mai bine.</p>
+                    </div>
+                </div>
+                {% comment %} IMG 2 RIGHT {% endcomment %}
+                <div class="row" style="margin-top: 10%;">
+                    <div class="col-6">
+                        <div style="margin-left: 5%;">
+                            <p class="myriad" style="font-size: 3.0vw; text-align: left;">Iată cum arată lista ta de “to-do” pentru ca toate astea să îți aparțină:</p>
+                            <div style="margin-left: 5%;">
+                                <p class="myriad" style="font-size: 3.0vw; text-align: left;">✔️ Aplică pentru formularul Vision Studios.</p>
+                                <p class="myriad" style="font-size: 3.0vw; text-align: left;">✔️ Vino la interviu.</p>
+                                <p class="myriad" style="font-size: 3.0vw; text-align: left;">✔️ Începe să faci bani.</p>
+                            </div>
+                            <p class="myriad" style="font-size: 3.0vw; text-align: left; font-weight: bold; margin-top: 5%;">Simplu, nu?</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <img src="{% static 'modele/m_02.jpg' %}" draggable="false" class="img-fluid inline-photo show-on-scroll">
+                    </div>
+                </div>
+                {% comment %} IMG 3 LEFT {% endcomment %}
+                <div class="row" style="margin-top: 10%;">
+                    <div class="col-6">
+                        <img src="{% static 'modele/m_03.jpg' %}" draggable="false" class="img-fluid inline-photo show-on-scroll" style="margin-left: 5%;">
+                    </div>
+                    <div class="col-6" style="margin-left: 0%;margin-top: 10%;">
+                        <div class="myriad" style="font-size: 3.0vw; margin-bottom: 30%; ">Ca model la Vision Studios beneficiezi de training indiferent de experieță, relaxare, de o familie foarte tânără, de un program flexibil și ședințe foto și video profesionale. </div>
+                    </div>
+                </div>
+                {% comment %} IMG 4 RIGHT {% endcomment %}
+                <div class="row" style="margin-top: 10%;">
+                    <div class="col-6" style="margin-left: 0%; margin-top: auto; margin-bottom: auto;">
+                        <div class="myriad" style="font-size: 3.0vw; "> Vrei o schimbare majoră în viața ta? Vrei ca banii, bunurile și serviciile scumpe să nu mai reprezinte un impediment în cariera ta? Vision Studios este soluția ta. </div>
+                    </div>
+                    <div class="col-6">
+                        <img src="{% static 'modele/m_04.jpg' %}" draggable="false" class="img-fluid inline-photo show-on-scroll" style="margin-left: 5%;">
+                    </div>
+                </div>
+                {% comment %} IMG 5 LEFT {% endcomment %}
+                <div class="row" style="margin-top: 10%;">
+                    <div class="col-6">
+                        <img src="{% static 'modele/m_05.jpg' %}" draggable="false" class="img-fluid inline-photo show-on-scroll" style="margin-left: 5%;">
+                    </div>
+                    <div class="col-6" style="margin-left: 0%; display: flex;">
+                        <div class="myria" style="font-size: 3.5vw; margin-bottom: 30%; align-self: flex-end;"> Aplică și te așteptăm la interviu ca să ne cunoastem.</div>
+                    </div>
+                </div>
+                {% comment %} IMG 6 RIGHT {% endcomment %}
+                <div class="row" style="margin-top: 10%; margin-bottom: 20%;">
+                    <div class="col-6" style="margin-left: 0%; margin-top: auto; margin-bottom: auto;">
+                    </div>
+                    <div class="col-6">
+                        <img src="{% static 'modele/m_06.jpg' %}" draggable="false" class="img-fluid inline-photo show-on-scroll" style="margin-left: 5%;">
+                    </div>
                 </div>
             </div>
         </div>
