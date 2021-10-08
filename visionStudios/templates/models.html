@@ -21,7 +21,7 @@
             .mobileHide { display: none;}
         }
         
-        @media (max-width: 900px) {
+        @media (max-width: 600px) {
             .inline-photo {
             border: 0.75vw solid #fff;
             border-bottom: 1.0vw solid #fff;
@@ -50,7 +50,7 @@
             transform: rotate(-90deg);
             bottom: 0;
             margin-bottom: 20%;
-            margin-left: -25%;
+            margin-left: -26%;
             }
             .menuitem{
                 font-family: Futura;
@@ -65,8 +65,7 @@
                 font-size: 2.75vw;
                 transform: translateY(-30%);
             }
-        }
-        
+        }    
     </style>
 </head>
 <div class="modal in" id="myModal">
@@ -117,11 +116,15 @@
             <pre><button class="catchphrase" id="myCatchPhrase" style="transform: translateY(200%) rotate(-90deg); color: black; font-size: 2vw;"> Something special for you</button></pre>
         </div>
         <div class="col-9" style="text-align: center; margin-bottom: -30%; overflow: hidden">
-            <pre class="futura" style="font-size: 4.0vw; margin-top: 1%; margin-bottom: 0%; padding-bottom: 0%;">M    O    D    E    L    E</pre>
-            <pre class="menuitem" onclick="location.href = '/'" style="margin-top: 0%; padding-top: 0%;">
-                M  E
-                        N  U 
-            </pre>
+            <div class="row">
+                <pre class="futura" style="font-size: 4.0vw; margin-top: 1%; margin-bottom: 0%; padding-bottom: 0%;">M    O    D    E    L    E</pre>
+                <div>
+                    <pre class="menuitem" onclick="location.href = '/'" style="margin-top: 5%; padding-top: 0%;">
+                        M  E
+                                N  U 
+                    </pre>
+                </div>
+            </div>
             {% comment %} IMG 1 LEFT {% endcomment %}
             <div class="row" style="margin-top: 0%; transform: translateY(-10%);">
                 <div class="col-4">
@@ -188,7 +191,7 @@
 </div>
 <div class="mobileShow">
     <div class="row h-100" style="overflow: hidden;">
-        <button class="futura" onclick="topFunction()" id="myTopBtn" title="Go to top">back to top ────</button>
+        <button class="futura" onclick="topFunction()" id="myTopBtn2" title="Go to top">back to top ────</button>
         <div class="col-3" style="background-color: #121729; text-align: center;">
             <img src="{% static 'vs_title.png' %}" onclick="location.href = '/'" draggable="false" class="img" style="width: 200%;  transform: rotate(-90deg); margin-top: 100%; margin-left: -60%;">
             <div style="transform: rotate(-90deg); margin-top: -20%; margin-left: -50%; width: 250%;" onclick="location.href = '/'"><pre><p class="futura" style="font-size: 1.25vw; color: #FFFFFF;">C L U J    N A P O C A    •    R O M A N I A</p></pre></div>
@@ -274,6 +277,7 @@
 <script>
     //Get the button
     var mybutton = document.getElementById("myTopBtn");
+    var mybutton2 = document.getElementById("myTopBtn2");
 
     // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function() {scrollFunction()};
@@ -281,8 +285,10 @@
     function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
+                mybutton2.style.display = "block";
             } else {
                 mybutton.style.display = "none";
+                mybutton2.style.display = "none";
             }
         }
 

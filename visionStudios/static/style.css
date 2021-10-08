@@ -215,7 +215,7 @@
   position: relative;
   transform: rotate(-90deg);
   bottom: 0;
-  margin-bottom: 0%;
+  margin-bottom: 10%;
 }
 
 .catchphrase {
@@ -231,6 +231,22 @@
 }
 
 #myTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 2%;
+  right: 30px;
+  z-index: 99;
+  font-size: 2.5vw;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  width:27%;
+  background-color: #FFFFFF;
+  color: black;
+}
+
+#myTopBtn2 {
   display: none;
   position: fixed;
   bottom: 2%;
@@ -270,6 +286,11 @@
 }
 
 #myTopBtn:hover {
+  background-color: #121729;
+  color: white;
+}
+
+#myTopBtn2:hover {
   background-color: #121729;
   color: white;
 }
@@ -413,5 +434,65 @@ transform: scaleX(1);
   .applyForm {
     margin: 0 auto;
     width: 70%;
+  }
+}
+
+.mobileShow {display: none;} 
+
+/* Smartphone Portrait and Landscape */ 
+@media (max-width: 480px) { 
+        .mobileShow {display: inline;}
+}
+
+.mobileHide { display: inline; } 
+
+/* Smartphone Portrait and Landscape */ 
+@media (max-width: 480px) { 
+    .mobileHide { display: none;}
+}
+
+@media (max-width: 900px) {
+  .inline-photo {
+  border: 0.75vw solid #fff;
+  border-bottom: 1.0vw solid #fff;
+  border-radius: .25em;
+  box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+  margin: 0 0;
+  opacity: 0;
+  transform: translateY(4em) rotateZ(-5deg);
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+              opacity .3s .25s ease-out;
+  max-width: 600px;
+  width: 100%;
+  will-change: transform, opacity;
+  }
+  .apply_txt {
+  font-family: Futura;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  font-size: 4.0vw;
+  color: white;
+  z-index: 10;
+  position: relative;
+  transform: rotate(-90deg);
+  bottom: 0;
+  margin-bottom: 20%;
+  margin-left: -26%;
+  }
+  .menuitem{
+      font-family: Futura;
+      border: none;
+      cursor:pointer;
+      outline:none;
+      z-index: 10;
+      position: relative;
+      color: black;
+      float: right;
+      margin-right: 5%;
+      font-size: 2.75vw;
+      transform: translateY(-30%);
   }
 }
