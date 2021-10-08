@@ -492,3 +492,49 @@ transform: scaleX(1);
       transform: translateY(-30%);
   }
 }
+
+.bodyCol {
+  background-color: #fff;
+}
+@media (max-width: 480px) {
+  .bodyCol {
+      background-color: #121729;
+  }
+}
+
+.btn-grad {background-image: linear-gradient(to right, #F2994A 0%, #F2C94C  51%, #F2994A  100%)}
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+@keyframes pulse {
+from {
+transform : scale(1);
+opacity   : 1;
+}
+50% {
+transform : scale(0.75);
+opacity   : 0.25;
+}
+to {
+transform : scale(1);
+opacity   : 1;
+}
+}
+@-webkit-keyframes pulse {
+0%   { -webkit-transform: scale(1)   ; opacity: 1;    }
+50%  { -webkit-transform: scale(0.75); opacity: 0.25; }
+100% { -webkit-transform: scale(1)   ; opacity: 1;    }
+}
