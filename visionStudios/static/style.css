@@ -309,10 +309,6 @@
   line-height: 80%;
 }
 
-
-
-
-
 .typed_text {
   font-size: 28vw;
   color: black;
@@ -433,7 +429,7 @@ transform: scaleX(1);
 @media (max-width: 900px) {
   .applyForm {
     margin: 0 auto;
-    width: 70%;
+    width: 85%;
   }
 }
 

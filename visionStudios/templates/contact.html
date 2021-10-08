@@ -48,6 +48,7 @@
         </div>
     </div>
 </div>
+<div class="mobileHide">
     <div class="row h-100" style="overflow: hidden;">
         <button class="futura" onclick="topFunction()" id="myTopBtn" title="Go to top">back to top ────</button>
         <div class="col-3" style="background-color: #121729; text-align: center;">
@@ -141,6 +142,101 @@
             </div>
         </div>
     </div>
+</div>
+<div class="mobileShow">
+    <div class="row h-100" style="overflow: hidden;">
+        <button class="futura" onclick="topFunction()" id="myTopBtn" title="Go to top">back to top ────</button>
+        <div class="col-3" style="background-color: #121729; text-align: center;">
+            <img src="{% static 'vs_title.png' %}" onclick="location.href = '/'" draggable="false" class="img" style="width: 200%;  transform: rotate(-90deg); margin-top: 100%; margin-left: -60%;">
+            <div style="transform: rotate(-90deg); margin-top: -20%; margin-left: -50%; width: 250%;" onclick="location.href = '/'"><pre><p class="futura" style="font-size: 1.25vw; color: #FFFFFF;">C L U J    N A P O C A    •    R O M A N I A</p></pre></div>
+            <pre><button class="apply_txt" id="myApplyBtn" onclick="location.href = '/aplica'" style="font-size: 6.0vw;"> ───  A   P   L   I   C   Ă</button></pre>
+        </div>
+        <div class="col-9" style="text-align: center; overflow: hidden">
+            <div class="row">
+                <pre class="futura" style="font-size: 4.0vw; margin-top: 1%; margin-bottom: 0%; padding-bottom: 0%;">C    O    N    T    A    C    T</pre>
+                <div style="float: right">
+                    <pre class="menuitem" onclick="location.href = '/'" style="margin-top: 10%; padding-top: 0%;">
+                        M  E
+                                N  U 
+                    </pre>
+                </div>
+                <div style="margin-top: 0%;">
+                    <pre class="futura" style="font-size: 2.25vw; float: left; margin-left: 10%; color: #3d3d3d;">F i e l d s    m a r k e d    w i t h    a n   <span style="color:#AB4E52">*</span>   a r e    r e q u i r e d.</pre>
+                </div>
+            </div>
+            <div class="row">
+                <div class="contactForm">
+                    <form method="post" >
+                        {% csrf_token %}
+                        <div id="div_id_email" class="form-group">
+                            <label for="id_email" class="requiredField futura" style="float: left; font-size: 3.5vw;">Email <span style="color:#AB4E52">*</span></label>
+                            <div class="">
+                                <input type="email" name="email" maxlength="60" class="emailinput form-control" required="" id="id_email" style="background-color: rgb(209, 209, 209); padding: 8%;">
+                            </div>
+                        </div>
+                        <div id="div_id_name" class="form-group">
+                            <label for="id_name" class="requiredField futura" style="float: left; font-size: 3.5vw;"> Nume <span style="color:#AB4E52">*</span> </label>
+                            <div class="">
+                                <input type="text" name="name" maxlength="60" class="textinput textInput form-control" required="" id="id_name" style="background-color: rgb(209, 209, 209); padding: 8%;">
+                            </div>
+                        </div>
+                        <div id="div_id_message" class="form-group">
+                            <label for="id_message" class="requiredField futura" style="float: left; font-size: 3.5vw;">Mesajul tău <span style="color:#AB4E52">*</span> </label>
+                            <div class="">
+                                <textarea name="message" cols="40" rows="10" maxlength="3000" class="textarea form-control" required="" id="id_message" style="background-color: rgb(209, 209, 209); padding: 8%;"></textarea>
+                            </div>
+                        </div> 
+                        <div  style="margin-top: 15%;">
+                            <button class="btn apply_btn futura" type="submit" style="color: white; font-size: 3vw;  border-radius: 5px;"><span>T R I M I T E</span></button>
+                        </div>         
+                    </form>
+                </div>
+            </div>
+            <div class="row" style="background-color: #121729; margin-top: 5%; color: white;">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="gillSansRegular mt-3" style="font-size: 4.5vw;">
+                            Mail
+                        </div>
+                        <a href="mailto:office@visionstudio.ro" style="text-decoration: none; color: white; font-size: 3.5vw;"><span class="gillSansLight">office@visionstudio.ro</span></a>
+                    </div>
+                    <div class="col-6">
+                        <div class="gillSansRegular mt-3" style="font-size: 4.5vw;">
+                            Adresa
+                        </div>
+                        <a style="text-decoration: none; color: white; font-size: 2.5vw;"><span class="gillSansLight">Str. Vrancea 43C, Etaj 1, Ap. 2, Cluj Napoca</span></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="gillSansRegular mt-3" style="font-size: 4.5vw;">
+                            Website
+                        </div>
+                        <a href="/" style="margin-top: -1%; padding: 0%; text-decoration: none; color: white; font-size: 3.5vw;"><span class="gillSansLight">www.visionstudio.ro</span></a>
+                    </div>
+                    <div class="col-6">
+                        <div class="gillSansRegular mt-3" style="font-size: 4.5vw;">
+                            Telefon
+                        </div>
+                        <a style="text-decoration: none; color: white; font-size: 3.5vw;"><span class="gillSansLight">0739 692 514</span></a>
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 2%; margin-top: 5%;">
+                    <div class="col-6">
+                        <a href="https://www.instagram.com/visionstudioscj/" target="_blank">
+                            <img src="{% static '/social_logos/insta2.png' %}" draggable="false" class="img-fluid" height="auto" width="25%" style="float: right;">
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.facebook.com/visionstudioscj" target="_blank">
+                            <img src="{% static '/social_logos/fb.png' %}" draggable="false" class="img-fluid" height="auto" width="25%" style="float: left;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
     //Get the button
     var mybutton = document.getElementById("myTopBtn");

@@ -52,6 +52,7 @@
         </div>
     </div>
 </div>
+<div class="mobileHide">
     <div class="row h-100" style="overflow: hidden; background-color: #121729;">
         <button class="futura" onclick="topFunction()" id="myTopBtn" title="Go to top">back to top ────</button>
         <div class="col-3" style="background-color: #121729; text-align: center;">
@@ -177,6 +178,134 @@
             </div>
         </div>
     </div>
+</div>
+<div class="mobileShow">
+    <div class="row h-100" style="overflow: hidden; background-color: #121729;">
+        <button class="futura" onclick="topFunction()" id="myTopBtn" title="Go to top">back to top ────</button>
+        <div class="col-4" style="background-color: #121729; text-align: center;">
+            <div>
+                <img src="{% static 'vs_title.png' %}" onclick="location.href = '/'" draggable="false" class="img" style="width: 140%;  transform: rotate(-90deg); margin-top: 80%; margin-left: -50%;">
+                <div style="transform: rotate(-90deg); margin-top: -20%; margin-left: -40%; width: 200%;" onclick="location.href = '/'"><pre><p class="futura" style="font-size: 1.25vw; color: #FFFFFF;">C L U J    N A P O C A    •    R O M A N I A</p></pre></div>
+            </div>
+            <div style="margin-top: 90%;">
+                <p class="cochinRegular" style="font-size: 2.75vw; color: white; margin: 5%; margin-bottom: 10%; margin-top: 15%;">
+                    Aplică pentru un job de model completând formularul din pagină. Te vom contacta telefonic în decursul aceleiași zile pentru a stabili un interviu. <span class="cochinRegular" style="font-weight: bold;">Te rugăm, asigură-te ca ne oferi numărul de telefon corect.</span>
+                </p>
+                <p class="cochinRegular" style="font-size: 2.75vw; color: white; margin: 5%; margin-bottom: 10%;">
+                    Aplicarea reprezintă doar o intenție din partea ta, nu presupune nicio obligație, fiind doar o ocazie de a ne cunoaște, de a-ți raspunde la întrebari și de a discuta în persoană despre beneficiile unei colaborări cu studioul nostru.
+                </p>
+                <p class="cochinRegular" style="font-size: 2.75vw; color: white; margin: 5%;">
+                    Despre un eventual contract vom putea vorbi abia la finalul întrevederii, în cazul în care suntem cu toții multumiți de cele discutate.
+                </p>
+            </div>
+        </div>
+        <div class="col-8" style="text-align: center; overflow: hidden; text-align: center; background-image: url('{% static 'background_img.jpg' %}'); background-size: contain;background-repeat: no-repeat; background-color: #121729;">
+            <div class="row">
+                <pre class="futura" style="font-size: 5.0vw; margin-top: 1%; margin-bottom: 0%; padding-bottom: 0%; color: white;">A    P    L    I    C    Ă</pre>
+                <div style="float: right">
+                <pre class="menuitem" onclick="location.href = '/'" style="margin-top: 5%; padding-top: 0%; color: white;">
+                    M  E
+                            N  U 
+                </pre>
+                </div>
+            </div>
+            <div class="row" style="margin-top: -5%;">
+                <div class="applyForm">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div id="div_id_name" class="form-group" style="margin-bottom: 8%;">
+                            <div class="futuraMedium">
+                                <input type="text" name="name" maxlength="60" class="textinput textInput form-control" required="" id="id_name" value="Nume, prenume" onfocus="if(this.value == 'Nume, prenume'){this.value = '';}">
+                            </div>
+                            <p class="futuraMedium" style="color: red;">{{appForm.errors.name}}</p>
+                        </div>
+                        <div id="div_id_phone" class="form-group" style="margin-bottom: 8%;">
+                            <div class="futuraMedium">
+                                <input type="text" name="phone" maxlength="15" class="textinput textInput form-control" required="" id="id_phone" value="Telefon" onfocus="if(this.value == 'Telefon'){this.value = '';}">
+                            </div>
+                            <p class="futuraMedium" style="color: red;">{{appForm.errors.phone}}</p>
+                        </div>
+                        <div id="div_id_year_of_birth" class="form-group" style="margin-bottom: 8%;">
+                            <div class="futuraMedium">
+                                <input type="text" name="year_of_birth" class="numberinput form-control" required="" id="id_year_of_birth" value="Anul nașterii" onfocus="if(this.value == 'Anul nașterii'){this.value = '';}">
+                            </div>
+                            <p class="futuraMedium" style="color: red;">{{appForm.errors.year_of_birth}}</p>
+                        </div>
+                        <div id="div_id_english_level" class="form-group" style="margin-bottom: 8%;">
+                            <div class="futuraMedium">
+                                <select name="english_level" class="form-select form-control" required="" id="id_english_level">
+                                     <option value="" selected="">Nivel limbă engleză</option>
+                                        <option value="1">Începător</option>
+                                        <option value="2">Mediu</option>
+                                        <option value="3">Avansat</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="div_id_experience" class="form-group" style="margin-bottom: 8%;">
+                            <div class="futuraMedium">
+                                    <select name="experience" class="form-select form-control" required="" id="id_experience">
+                                        <option value="" selected="">Experiență</option>
+                                        <option value="1">Nu</option>
+                                        <option value="2">Da, sub 6 luni</option>
+                                        <option value="3">Da, peste 6 luni</option>
+                                 </select>
+                            </div>
+                        </div>                        
+                        <div id="div_id_message" class="form-group" style="margin-bottom: 8%;">
+                            <div class="futuraMedium">
+                                <textarea name="message" cols="40" rows="10" maxlength="3000" class="textarea form-control" required="" id="id_message">Mesajul tău (opțional)</textarea>
+                            </div>
+                        </div>
+                        <button class="btn apply_btn" type="submit" style="vertical-align:middle; background-color: white; padding-top: 0%; padding-bottom: 0%; padding-right: 10%; padding-left: 10%;"><span><pre class="futura" style="color: black; font-size: 3vw; padding: 0%; margin: 0%;">A P L I C Ă</pre></span></button>
+                    </form>
+                </div>
+            </div>
+            <div class="row" style="background-color: #121729; margin-top: 5%; color: white;">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="gillSansRegular mt-3" style="font-size: 4.5vw;">
+                            Mail
+                        </div>
+                        <a href="mailto:office@visionstudio.ro" style="text-decoration: none; color: white; font-size: 3.5vw;"><span class="gillSansLight">office@visionstudio.ro</span></a>
+                    </div>
+                    <div class="col-6">
+                        <div class="gillSansRegular mt-3" style="font-size: 4.5vw;">
+                            Adresa
+                        </div>
+                        <a style="text-decoration: none; color: white; font-size: 2.5vw;"><span class="gillSansLight">Str. Vrancea 43C, Etaj 1, Ap. 2, Cluj Napoca</span></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="gillSansRegular mt-3" style="font-size: 4.5vw;">
+                            Website
+                        </div>
+                        <a href="/" style="margin-top: -1%; padding: 0%; text-decoration: none; color: white; font-size: 3.5vw;"><span class="gillSansLight">www.visionstudio.ro</span></a>
+                    </div>
+                    <div class="col-6">
+                        <div class="gillSansRegular mt-3" style="font-size: 4.5vw;">
+                            Telefon
+                        </div>
+                        <a style="text-decoration: none; color: white; font-size: 3.5vw;"><span class="gillSansLight">0739 692 514</span></a>
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 2%; margin-top: 5%;">
+                    <div class="col-6">
+                        <a href="https://www.instagram.com/visionstudioscj/" target="_blank">
+                            <img src="{% static '/social_logos/insta2.png' %}" draggable="false" class="img-fluid" height="auto" width="25%" style="float: right;">
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.facebook.com/visionstudioscj" target="_blank">
+                            <img src="{% static '/social_logos/fb.png' %}" draggable="false" class="img-fluid" height="auto" width="25%" style="float: left;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
     //Get the button
     var mybutton = document.getElementById("myTopBtn");
