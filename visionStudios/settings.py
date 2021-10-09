@@ -31,8 +31,8 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost, 0.0.0.0, visionstudios.ro, our-vision-gzrzj.ondigitalocean.app").split(",")
-
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,0.0.0.0,visionstudios.ro,our-vision-gzrzj.ondigitalocean.app").split(",")
+print(ALLOWED_HOSTS)
 # Application definition
 
 INSTALLED_APPS = [
