@@ -111,19 +111,40 @@
     <div class="row h-100" style="overflow: hidden;">
         <button class="futura" onclick="topFunction()" id="myTopBtn" title="Go to top">back to top ────</button>
         <div class="col-3" style="background-color: #121729; text-align: center;">
-            <img src="{% static 'vs_title.jpg' %}" draggable="false" class="img-fluid" style="width: 80%; margin-top: 10%; margin-left: 10%;  margin-right: 10%;">
-            <pre><p class="futura" style="font-size: 0.75vw; color: #FFFFFF">C L U J    N A P O C A    •    R O M A N I A</p></pre>            <pre><button class="apply_txt" id="myApplyBtn" onclick="location.href = '/aplica'"> ───  A   P   L   I   C   Ă</button></pre>
-            <pre><button class="catchphrase" id="myCatchPhrase" style="font-size: 5vw; color: #6f7070"> We'll show it</button></pre>
-            <pre><button class="catchphrase" id="myCatchPhrase" style="transform: translateY(200%) rotate(-90deg); color: black; font-size: 2vw;"> Something special for you</button></pre>
+            <img src="{% static 'vs_title.jpg' %}" onclick="location.href = '/'" draggable="false" class="img-fluid" style="width: 80%; margin-top: 10%; margin-left: 10%;  margin-right: 10%; cursor: pointer;">
+            <pre><p class="futura" style="font-size: 0.75vw; color: #FFFFFF; cursor: pointer;" onclick="location.href = '/'">C L U J    N A P O C A    •    R O M A N I A</p></pre>            <pre><button class="apply_txt" id="myApplyBtn" onclick="location.href = '/aplica'"> ───  A   P   L   I   C   Ă</button></pre>
         </div>
         <div class="col-9" style="text-align: center; margin-bottom: -30%; overflow: hidden">
             <div class="row">
                 <pre class="futura" style="font-size: 4.0vw; margin-top: 1%; margin-bottom: 0%; padding-bottom: 0%;">M    O    D    E    L    E</pre>
                 <div>
-                    <pre class="menuitem" onclick="location.href = '/'" style="margin-top: 5%; padding-top: 0%;">
-                        M  E
-                                N  U 
-                    </pre>
+                    <div class="dropdown" style="float: right;">
+                        <button class="dropbtn"><p class="menuitem" style=" white-space: normal;
+                            word-wrap: break-word; width: 100px;">M E<br><p class="menuitem" style=" margin-left: 10%; margin-top: -10%">N U </p>
+                        </p></button>
+                        <div class="dropdown-content">
+                          <a href="/">Home</a>
+                          <a href="/aboutus">Despre Noi</a>
+                          <a href="/galerie">Galerie</a>
+                          <a href="/contact">Contact</a>
+                          <a href="/aplica">Aplică</a>
+                        </div>
+                      </div>
+                </div>
+                <div>
+                    <p class="catchphrase" style="float: right;
+                    z-index: -2;
+                    color: black;font-size: 5vw; color: #6f7070"> We'll show it</p>
+                </div>
+                <div>
+                    <p class="catchphrase" style="
+                    float: right;
+                    z-index: -2;
+                    margin-top: -10%;
+                    font-size: 2.5vw;
+                    position: relative;
+                    outline: none;
+                    color: black;transform: translateY(200%) rotate(-90deg); color: black; font-size: 2vw; "> Something special for you</p>
                 </div>
             </div>
             {% comment %} IMG 1 LEFT {% endcomment %}
@@ -198,18 +219,25 @@
             <img src="{% static 'vs_title.png' %}" onclick="location.href = '/'" draggable="false" class="img" style="width: 200%;  transform: rotate(-90deg); margin-top: 100%; margin-left: -60%;">
             <div style="transform: rotate(-90deg); margin-top: -20%; margin-left: -50%; width: 250%;" onclick="location.href = '/'"><pre><p class="futura" style="font-size: 1.25vw; color: #FFFFFF;">C L U J    N A P O C A    •    R O M A N I A</p></pre></div>
             <pre><button class="apply_txt" id="myApplyBtn" onclick="location.href = '/aplica'" style="font-size: 6.0vw;"> ───  A   P   L   I   C   Ă</button></pre>
-            <pre><button class="catchphrase" id="myCatchPhrase" style="font-size: 5vw; color: #6f7070; margin-top: -20%;"> We'll show it</button></pre>
-            <pre><button class="catchphrase" id="myCatchPhrase" style="transform: translateY(200%) rotate(-90deg); color: black; font-size: 2vw; margin-top: -25%;"> Something special for you</button></pre>
         </div>
         <div class="col-9" style="text-align: center; overflow: hidden">
             <div class="row">
                 <pre class="futura" style="font-size: 4.0vw; margin-top: 1%; margin-bottom: 0%; padding-bottom: 0%;">M    O    D    E    L    E</pre>
-                <div>
-                    <pre class="menuitem" onclick="location.href = '/'" style="margin-top: 5%; padding-top: 0%;">
-                        M  E
-                                N  U 
-                    </pre>
+                <div style="float: right;">
+                    <div class="dropdown" style="float: right;">
+                        <button class="dropbtn"><p class="menuitem" style=" white-space: normal;
+                            word-wrap: break-word; width: 50px;">M E<p class="menuitem">N U </p>
+                        </p></button>
+                        <div class="dropdown-content" style="float: right;">
+                          <a href="/" style="font-size: 3vw;">Home</a>
+                          <a href="/aboutus" style="font-size: 3vw;">Despre Noi</a>
+                          <a href="/galerie" style="font-size: 3vw;">Galerie</a>
+                          <a href="/contact" style="font-size: 3vw;">Contact</a>
+                          <a href="/aplica" style="font-size: 3vw;">Aplică</a>
+                        </div>
+                      </div>
                 </div>
+                
             </div>
             {% comment %} IMG 1 LEFT {% endcomment %}
             <div style="transform: translateY(0%);">

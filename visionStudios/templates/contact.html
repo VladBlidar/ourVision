@@ -52,19 +52,26 @@
     <div class="row h-100" style="overflow: hidden;">
         <button class="futura" onclick="topFunction()" id="myTopBtn" title="Go to top">back to top ────</button>
         <div class="col-3" style="background-color: #121729; text-align: center;">
-            <img src="{% static 'vs_title.jpg' %}" draggable="false" class="img-fluid" style="width: 80%; margin-top: 10%; margin-left: 10%;  margin-right: 10%;">
-            <pre><p class="futura" style="font-size: 0.75vw; color: #FFFFFF">C L U J    N A P O C A    •    R O M A N I A</p></pre>            <pre><button class="apply_txt" id="myApplyBtn" onclick="location.href = '/aplica'"> ───  A   P   L   I   C   Ă</button></pre>
-            <pre><button class="catchphrase" id="myCatchPhrase" style="font-size: 5vw; color: #6f7070"> We'll show it</button></pre>
-            <pre><button class="catchphrase" id="myCatchPhrase" style="transform: translateY(200%) rotate(-90deg); color: black; font-size: 2vw;"> Something special for you</button></pre>
+            <img src="{% static 'vs_title.jpg' %}" draggable="false"  onclick="location.href = '/'" class="img-fluid" style="width: 80%; margin-top: 10%; margin-left: 10%;  margin-right: 10%; cursor: pointer;">
+            <pre><p class="futura" style="font-size: 0.75vw; color: #FFFFFF; cursor: pointer;" onclick="location.href = '/'">C L U J    N A P O C A    •    R O M A N I A</p></pre>            <pre><button class="apply_txt" id="myApplyBtn" onclick="location.href = '/aplica'"> ───  A   P   L   I   C   Ă</button></pre>
+
         </div>
         <div class="col-9" style="text-align: center; overflow: hidden">
             <div class="row">
                 <pre class="futura" style="font-size: 4.0vw; margin-top: 1%; margin-bottom: 0%; padding-bottom: 0%;">C    O    N    T    A    C    T</pre>
                 <div style="float: right">
-                <pre class="menuitem" onclick="location.href = '/'" style="margin-top: 0%; padding-top: 0%;">
-                    M  E
-                            N  U 
-                </pre>
+                    <div class="dropdown" style="float: right;">
+                        <button class="dropbtn"><p class="menuitem" style=" white-space: normal;
+                            word-wrap: break-word; width: 100px;">M E<br><p class="menuitem" style=" margin-left: 10%; margin-top: -10%">N U </p>
+                        </p></button>
+                        <div class="dropdown-content">
+                          <a href="/">Home</a>
+                          <a href="/aboutus">Despre Noi</a>
+                          <a href="/galerie">Galerie</a>
+                          <a href="/modele">Modele</a>
+                          <a href="/aplica">Aplică</a>
+                        </div>
+                      </div>
                 </div>
                 <div style="margin-top: 0%;">
                     <pre class="futura" style="font-size: 1.75vw; float: left; margin-left: 10%; color: #3d3d3d;">F i e l d s    m a r k e d    w i t h    a n   <span style="color:#AB4E52">*</span>   a r e    r e q u i r e d.</pre>
@@ -155,10 +162,18 @@
             <div class="row">
                 <pre class="futura" style="font-size: 4.0vw; margin-top: 1%; margin-bottom: 0%; padding-bottom: 0%;">C    O    N    T    A    C    T</pre>
                 <div style="float: right">
-                    <pre class="menuitem" onclick="location.href = '/'" style="margin-top: 10%; padding-top: 0%;">
-                        M  E
-                                N  U 
-                    </pre>
+                    <div class="dropdown" style="float: right;">
+                        <button class="dropbtn"><p class="menuitem" style=" white-space: normal;
+                            word-wrap: break-word; width: 50px;">M E<p class="menuitem">N U </p>
+                        </p></button>
+                        <div class="dropdown-content" style="float: right;">
+                          <a href="/" style="font-size: 3vw;">Home</a>
+                          <a href="/aboutus" style="font-size: 3vw;">Despre Noi</a>
+                          <a href="/galerie" style="font-size: 3vw;">Galerie</a>
+                          <a href="/modele" style="font-size: 3vw;">Modele</a>
+                          <a href="/aplica" style="font-size: 3vw;">Aplică</a>
+                        </div>
+                      </div>
                 </div>
                 <div style="margin-top: 0%;">
                     <pre class="futura" style="font-size: 2.25vw; float: left; margin-left: 10%; color: #3d3d3d;">F i e l d s    m a r k e d    w i t h    a n   <span style="color:#AB4E52">*</span>   a r e    r e q u i r e d.</pre>

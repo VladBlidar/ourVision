@@ -48,11 +48,12 @@
 </div>
 <div class="mobileHide">
     <div class="container-fluid">
+        
         <div class="row h-100" style="overflow: hidden;">
             <button class="futura" onclick="topFunction()" id="myTopBtn" title="Go to top">back to top ────</button>
             <div class="col-3" style="background-color: #121729; text-align: center;">
-                <img src="{% static 'vs_title.jpg' %}" draggable="false" class="img-fluid" style="width: 80%; margin-top: 10%; margin-left: 10%;  margin-right: 10%;">
-                <pre><p class="futura" style="font-size: 0.75vw; color: #FFFFFF">C L U J    N A P O C A    •    R O M A N I A</p></pre>                <pre><button class="apply_txt" id="myApplyBtn" style="font-size: 0.7 vw;" onclick="location.href = '/aplica'"> ───  A   P   L   I   C   Ă</button></pre>
+                <img src="{% static 'vs_title.jpg' %}" onclick="location.href = '/'" draggable="false" class="img-fluid" style="width: 80%; margin-top: 10%; margin-left: 10%;  margin-right: 10%; cursor: pointer;">
+                <pre><p class="futura" style="font-size: 0.75vw; color: #FFFFFF; cursor: pointer;" onclick="location.href = '/'">C L U J    N A P O C A    •    R O M A N I A</p></pre>                <pre><button class="apply_txt" id="myApplyBtn" style="font-size: 0.7 vw;" onclick="location.href = '/aplica'"> ───  A   P   L   I   C   Ă</button></pre>
             </div>
             <div class="col-9" style="text-align: center;">
                 <div class="row" style="margin-bottom: 0%;">
@@ -69,10 +70,18 @@
                         </div>
                     </div>
                     <div class="col-5">
-                        <pre class="menuitem" onclick="location.href = '/'" style="margin: 0%; padding: 0%; margin-right: 7%;">
-                            M  E
-                                    N  U 
-                        </pre>
+                        <div class="dropdown">
+                            <button class="dropbtn"><p class="menuitem" style=" white-space: normal;
+                                word-wrap: break-word; width: 100px;">M E<br><p class="menuitem" style=" margin-left: 10%; margin-top: -10%">N U </p>
+                            </p></button>
+                            <div class="dropdown-content">
+                              <a href="/">Home</a>
+                              <a href="/modele">Modele</a>
+                              <a href="/galerie">Galerie</a>
+                              <a href="/contact">Contact</a>
+                              <a href="/aplica">Aplică</a>
+                            </div>
+                          </div>
                         <img src="{% static 'despre_noi/as_02.jpg' %}" draggable="false" class="img-fluid inline-photo show-on-scroll" style="margin-left: 5%; width:80%; margin-top: 25%; margin-right: 5%;">
                     </div>
                 </div>
@@ -170,11 +179,19 @@
                     <div class="col-8">
                         <img src="{% static 'despre_noi/as_01.jpg' %}" draggable="false" class="img-fluid inline-photo show-on-scroll" style="margin-left: 5%;">
                     </div>
-                    <div class="col-4">
-                        <pre class="menuitem" onclick="location.href = '/'" style="margin: 0%; padding: 0%; margin-right: 7%; margin-top: -10%;">
-                            M  E
-                                    N  U 
-                        </pre>
+                    <div class="col-3">
+                        <div class="dropdown">
+                            <button class="dropbtn"><p class="menuitem" style=" white-space: normal;
+                                word-wrap: break-word; width: 50px;">M E<p class="menuitem">N U </p>
+                            </p></button>
+                            <div class="dropdown-content">
+                              <a href="/" style="font-size: 3vw;">Home</a>
+                              <a href="/modele" style="font-size: 3vw;">Modele</a>
+                              <a href="/galerie" style="font-size: 3vw;">Galerie</a>
+                              <a href="/contact" style="font-size: 3vw;">Contact</a>
+                              <a href="/aplica" style="font-size: 3vw;">Aplică</a>
+                            </div>
+                          </div>
                     </div>
                 </div>
                 <div class="row">
@@ -280,6 +297,7 @@
     </div>
 </div>
     <script>
+
         //Get the button
         var mybutton = document.getElementById("myTopBtn");
         var mybutton2 = document.getElementById("myTopBtn2");

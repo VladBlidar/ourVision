@@ -12,6 +12,8 @@
         .errorlist {
             color: red;
         }
+        .dropdown-content a:hover {background-color: #ddd;}
+        .dropdown:hover .dropbtn {background-color: #808080;}
     </style>
 </head>
 <div class="modal in" id="myModal">
@@ -56,8 +58,8 @@
     <div class="row h-100" style="overflow: hidden; background-color: #121729;">
         <button class="futura" onclick="topFunction()" id="myTopBtn" title="Go to top">back to top ────</button>
         <div class="col-3" style="background-color: #121729; text-align: center;">
-            <img src="{% static 'vs_title.jpg' %}" draggable="false" class="img-fluid" style="width: 80%; margin-top: 10%; margin-left: 10%;  margin-right: 10%;">
-            <pre><p class="futura" style="font-size: 0.75vw; color: #FFFFFF">C L U J    N A P O C A    •    R O M A N I A</p></pre>
+            <img src="{% static 'vs_title.jpg' %}" draggable="false"  class="img-fluid" onclick="location.href = '/'" style="width: 80%; margin-top: 10%; margin-left: 10%;  margin-right: 10%; cursor: pointer;">
+            <pre><p class="futura" style="font-size: 0.75vw; color: #FFFFFF; cursor: pointer;" onclick="location.href = '/'">C L U J    N A P O C A    •    R O M A N I A</p></pre>
             <pre><button class="catchphrase" id="myCatchPhrase" style="font-size: 5vw; color: #6f7070"> We'll show it</button></pre>
             <pre><button class="catchphrase" id="myCatchPhrase" style="transform: translateY(200%) rotate(-90deg); color: black; font-size: 2vw;"> Something special for you</button></pre>
             <p class="cochinRegular" style="font-size: 1.6vw; color: white; margin: 5%; margin-bottom: 10%; margin-top: 15%;">
@@ -74,10 +76,18 @@
             <div class="row">
                 <pre class="futura" style="font-size: 4.0vw; margin-top: 1%; margin-bottom: 0%; padding-bottom: 0%; color: white;">A    P    L    I    C    Ă</pre>
                 <div style="float: right">
-                <pre class="menuitem" onclick="location.href = '/'" style="margin-top: 0%; padding-top: 0%; color: white;">
-                    M  E
-                            N  U 
-                </pre>
+                    <div class="dropdown" style="float: right;">
+                        <button class="dropbtn"><p class="menuitem" style=" white-space: normal;
+                            word-wrap: break-word; width: 100px; color: white;">M E<br><p class="menuitem" style=" margin-left: 10%; margin-top: -10%; color: white;">N U </p>
+                        </p></button>
+                        <div class="dropdown-content">
+                          <a href="/">Home</a>
+                          <a href="/aboutus">Despre Noi</a>
+                          <a href="/galerie">Galerie</a>
+                          <a href="/contact">Contact</a>
+                          <a href="/modele">Modele</a>
+                        </div>
+                      </div>
                 </div>
             </div>
             <div class="row" style="margin-top: -5%;">
@@ -203,10 +213,18 @@
             <div class="row">
                 <pre class="futura" style="font-size: 5.0vw; margin-top: 1%; margin-bottom: 0%; padding-bottom: 0%; color: white;">A    P    L    I    C    Ă</pre>
                 <div style="float: right">
-                <pre class="menuitem" onclick="location.href = '/'" style="margin-top: 5%; padding-top: 0%; color: white;">
-                    M  E
-                            N  U 
-                </pre>
+                    <div class="dropdown" style="float: right;">
+                        <button class="dropbtn"><p class="menuitem" style="color: white; white-space: normal;
+                            word-wrap: break-word; width: 50px;">M E<p class="menuitem" style="color: white;"">N U </p>
+                        </p></button>
+                        <div class="dropdown-content" style="float: right;">
+                          <a href="/" style="font-size: 3vw;">Home</a>
+                          <a href="/aboutus" style="font-size: 3vw;">Despre Noi</a>
+                          <a href="/galerie" style="font-size: 3vw;">Galerie</a>
+                          <a href="/contact" style="font-size: 3vw;">Contact</a>
+                          <a href="/modele" style="font-size: 3vw;">Modele</a>
+                        </div>
+                      </div>
                 </div>
             </div>
             <div class="row" style="margin-top: -5%;">
