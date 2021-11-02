@@ -55,33 +55,40 @@
                 <img src="{% static 'vs_title.jpg' %}" onclick="location.href = '/'" draggable="false" class="img-fluid" style="width: 80%; margin-top: 10%; margin-left: 10%;  margin-right: 10%; cursor: pointer;">
                 <pre><p class="futura" style="font-size: 0.75vw; color: #FFFFFF; cursor: pointer;" onclick="location.href = '/'">C L U J    N A P O C A    •    R O M A N I A</p></pre>                <pre><button class="apply_txt" id="myApplyBtn" style="font-size: 0.7 vw;" onclick="location.href = '/aplica'"> ───  A   P   L   I   C   Ă</button></pre>
             </div>
+            
             <div class="col-9" style="text-align: center;">
                 <div class="row" style="margin-bottom: 0%;">
                     <pre class="futura" style="font-size: 3.25vw; margin-top: 1%; margin-bottom: 0%; padding-bottom: 0%;">D    E    S    P    R    E        N    O    I</pre>
+                    <div>
+                        <div class="dropdown" style="float: right;">
+                            <button class="dropbtn"><p class="menuitem" style=" white-space: normal;
+                                word-wrap: break-word; width: 100px;">M E N U</p>
+                            </p></button>
+                            <div class="dropdown-content">
+                                <a href="/">Home</a>
+                                <a href="/modele">Modele</a>
+                                <a href="/galerie">Galerie</a>
+                                <a href="/contact">Contact</a>
+                                <a href="/aplica">Aplică</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 {% comment %} IMG 1 LEFT {% endcomment %}
                 <div class="row" style="margin-top: 5%;">
+                    
                     <div class="col-7">
                         <img src="{% static 'despre_noi/as_01.jpg' %}" draggable="false" class="img-fluid inline-photo show-on-scroll" style="margin-left: 5%;">
                         <div style="margin-top: 10%;">
                             <p class="myriad" style="font-size: 1.25vw;"><span class="subhead">V</span>ision Studios este cel mai modern, fresh si cool studio de videochat din România, cu bazele chiar în inima Transilvaniei, Cluj Napoca. Vrei să vezi cum arată o viață în care banii nu mai au limită, iar vacanțele mult visate devin realitate?</p>
                             <p class="myriad" style="font-size: 1.25vw;">Ocazional, se întâmplă să cunoaștem modele care au convingerea că banii în videochat se câștigă luând loc în fața webcam-ului și asteptându-i să vină. Nu este adevărat! Banii în videochat se câștigă prin implicare, prin muncă, dar printr-o muncă bine răsplătită.</p>
                         </div>
+                        
+                        </div>
                     </div>
                     <div class="col-5">
-                        <div class="dropdown">
-                            <button class="dropbtn"><p class="menuitem" style=" white-space: normal;
-                                word-wrap: break-word; width: 100px;">M E<br><p class="menuitem" style=" margin-left: 10%; margin-top: -10%">N U </p>
-                            </p></button>
-                            <div class="dropdown-content">
-                              <a href="/">Home</a>
-                              <a href="/modele">Modele</a>
-                              <a href="/galerie">Galerie</a>
-                              <a href="/contact">Contact</a>
-                              <a href="/aplica">Aplică</a>
-                            </div>
-                          </div>
+                        
                         <img src="{% static 'despre_noi/as_02.jpg' %}" draggable="false" class="img-fluid inline-photo show-on-scroll" style="margin-left: 5%; width:80%; margin-top: 25%; margin-right: 5%;">
                     </div>
                 </div>
@@ -182,7 +189,7 @@
                     <div class="col-3">
                         <div class="dropdown">
                             <button class="dropbtn"><p class="menuitem" style=" white-space: normal;
-                                word-wrap: break-word; width: 50px;">M E<p class="menuitem">N U </p>
+                                word-wrap: break-word; width: 50px;">M E N U </p>
                             </p></button>
                             <div class="dropdown-content">
                               <a href="/" style="font-size: 3vw;">Home</a>
