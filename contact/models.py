@@ -33,9 +33,11 @@ class Application(models.Model):
     name = models.CharField(max_length=120)
     phone = models.CharField(max_length=15)
     year_of_birth = models.CharField(max_length=4)
-    english_level = models.CharField(max_length=20, choices=experience)
-    experience = models.CharField(max_length=20, choices=levels)
+    english_level = models.CharField(max_length=20, choices=levels)
+    experience = models.CharField(max_length=20, choices=experience)
     message = models.CharField(max_length=5000, null=True, blank=True)
+    facebook = models.CharField(max_length=5000, default='N/A')
+    instagram = models.CharField(max_length=5000, default='N/A')
     date_sent = models.DateTimeField(verbose_name='application_sent_time', auto_now=True)
     
     def __str__(self):

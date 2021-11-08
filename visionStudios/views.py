@@ -118,6 +118,8 @@ def applyPage(request):
             year_of_birth = request.POST.get('year_of_birth')
             english_level = request.POST.get('english_level')
             experience = request.POST.get('experience')
+            facebook = request.POST.get('facebook')
+            instagram = request.POST.get('instagram')
             if request.POST.get('message') != "Mesajul tău (opțional)":
                 message = request.POST.get('message')
             else:
@@ -128,7 +130,9 @@ def applyPage(request):
                 year_of_birth = year_of_birth,
                 english_level = english_level,
                 experience = experience,
-                message = message
+                message = message,
+                facebook=facebook,
+                instagram=instagram,
             )
             application.save()
             body = "Nume: " + name + "\n\n"
@@ -136,6 +140,9 @@ def applyPage(request):
             body += "Anul nasterii: " + year_of_birth + "\n\n"
             body += "Nivel limba engleza: " + dict(levels)[english_level] + "\n\n"
             body += "Experienta: " + dict(experience_lv)[experience] + "\n\n"
+            body += "Facebook: " + facebook + "\n\n"
+            body += "Instagram: " + instagram + "\n\n"
+            
             if message != "":
                 body += "Mesaj: " + message
 
@@ -143,9 +150,11 @@ def applyPage(request):
                 'APLICATIE NOUA',
                 body,
                 'visionstudios.office@gmail.com',
-                ['office@visionstudios.ro'],
+                ['visionstudios.office@gmail.com'],
                 fail_silently=True,
             )
             return redirect ('/')
+
+        print(appForm.errors)
         return render(request, "apply.html", {'appForm': appForm, 'flForm' : floaterForm})
 

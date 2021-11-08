@@ -45,10 +45,12 @@ class ApplicationForm(ModelForm):
     experience = forms.ChoiceField(choices=experience, label=False)
     experience.widget.attrs.update({'class': 'form-select'})
     message = forms.CharField(widget=forms.Textarea, max_length=3000, label=False)
+    facebook = forms.CharField(max_length=5000, label=False)
+    instagram = forms.CharField(max_length=5000, label=False)
 
     class Meta:
         model = Application
-        fields = ['name', 'phone', 'year_of_birth', 'english_level', 'experience', 'message']
+        fields = ['name', 'phone', 'year_of_birth', 'english_level', 'experience', 'facebook', 'instagram', 'message']
 
     def clean_name(self):
         name = self.cleaned_data.get('name')
@@ -67,3 +69,15 @@ class ApplicationForm(ModelForm):
         if year_of_birth == 'Anul nașterii':
             raise ValidationError("Please input your year of birth")
         return year_of_birth
+
+    def clean_facebook(self):
+        facebook = self.cleaned_data.get('facebook')
+        if facebook == 'N/A' or facebook == "" or facebook == 'Profil Facebook':
+            raise ValidationError("Please enter your facebook")
+        return facebook
+    
+    def clean_instagram(self):
+        instagram = self.cleaned_data.get('instagram')
+        if instagram == 'N/A' or instagram == "" or instagram == 'Profil Instagram':
+            raise ValidationError("Please enter your instagram")
+        return instagram
