@@ -350,7 +350,6 @@
 <script>
     $(document).ready(function()
     {
-
         var name = "{{appForm.name.value}}";
         if (name != '' && name != 'None') {
             $('#id_name').attr('value', name);
@@ -383,7 +382,6 @@
         }
         var phone = "{{appForm.phone.value}}";
         if (phone != '' && phone != 'None') {
-            console.log(phone);
             $('#id_phone_1').attr('value', phone);
             $('#id_phone_2').attr('value', phone);
         }
