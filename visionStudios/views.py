@@ -150,9 +150,11 @@ def applyPage(request):
                 'APLICATIE NOUA',
                 body,
                 'visionstudios.office@gmail.com',
-                ['visionstudios.office@gmail.com'],
+                ['office@visionstudios.ro'],
                 fail_silently=True,
             )
+            # 'visionstudios.office@gmail.com',
+            #     ['visionstudios.office@gmail.com'],
             return redirect ('/')
 
         print(appForm.errors)
