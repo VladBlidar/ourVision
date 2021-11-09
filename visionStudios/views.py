@@ -150,7 +150,7 @@ def applyPage(request):
                 'APLICATIE NOUA',
                 body,
                 'visionstudios.office@gmail.com',
-                ['office@visionstudios.ro'],
+                ['nicu@visionstudios.ro', 'office@visionstudios.ro'],
                 fail_silently=True,
             )
             # 'visionstudios.office@gmail.com',
