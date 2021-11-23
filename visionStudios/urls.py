@@ -25,12 +25,12 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homePage, name="homepage"),
-    path('modele', views.modelsPage, name="modelsPage"),
-    path('aboutus', views.aboutUsPage, name="modelsPage"),
-    path('galerie', views.galeryPage, name="galeryPage"),
-    path('contact', views.contactPage, name="contactPage"),
-    path('submitFloater', views.submitFloater, name="submitFloater"),
-    path('aplica', views.applyPage, name="applyPage"),
+    # path('modele', views.modelsPage, name="modelsPage"),
+    # path('aboutus', views.aboutUsPage, name="modelsPage"),
+    # path('galerie', views.galeryPage, name="galeryPage"),
+    # path('contact', views.contactPage, name="contactPage"),
+    # path('submitFloater', views.submitFloater, name="submitFloater"),
+    # path('aplica', views.applyPage, name="applyPage"),
     path(
         "favicon.ico",
         RedirectView.as_view(url=staticfiles_storage.url("favicon.ico")),

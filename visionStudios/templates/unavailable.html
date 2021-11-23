@@ -1,0 +1,108 @@
+{% load static %}
+<html style="background-image: url('{% static 'wip_no_text.jpg'%}');
+background-repeat: no-repeat;
+    background-color: #121729;
+        z-index: 1;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        text-align: center;
+        background-attachment: fixed;  
+        background-position: top;
+        height: 100%; ">
+    <head>
+        
+        <style>
+            @font-face {
+    font-family: "Futura";
+    src: url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.eot"); src: url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.woff") format("woff"), url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/da950f2527dc01bebcbedd536e38c145.svg#Futura") format("svg");
+}
+
+.wip_txt {
+    font-family: Futura;
+    font-size: 12vw;
+    color: white;
+    margin-top: 4%;
+}
+
+
+.hidden {
+  opacity:0;
+}
+.console-container {
+ 
+  font-family:Futura;
+  font-size:10em;
+  text-align:center;
+  width:80%;
+  display:block;
+  position:absolute;
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  margin-top: 10%;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
+#div2 {animation-timing-function: ease;}
+
+.element {
+    display: inline-block;
+
+    font-size: 1px;
+    padding: 1px;
+    color: white;
+    margin-right: 5px;
+    margin-left: 5px;
+    animation: skew 3s infinite;
+    transform: skew(20deg);
+    animation-direction: alternate;
+    opacity: 0.9;
+    }
+
+@keyframes skew {
+0% {
+transform: skewX(10deg);
+}
+100% {
+transform: skewX(-10deg);
+}
+}
+            @keyframes mymove {
+    0% {
+        transform: translatex(20vw) translatey(-10vw)
+    }
+    100% {
+        transform: translatex(-10vw) translatey(30vw);
+    }
+}
+@keyframes mymove2 {
+    0% {
+        transform: translatex(70vw) translatey(-10vw)
+    }
+    100% {
+        transform: translatex(30vw) translatey(30vw);
+    }
+}
+        </style>
+    </head>
+   
+    <body>
+        <div style="z-index: 99; position: absolute;">
+            <img src="{% static 'Star.png' %}" id="div2" style="width: 20vw; font-weight: bold; position: relative; animation: mymove 8s infinite; float: left;">
+            <img src="{% static 'Star_2.png' %}" id="div2" style="width: 10vw; font-weight: bold; position: relative; animation: mymove2 8s infinite;">
+        </div>
+        <div class="element" style="z-index: 1; position: relative;">
+            <img  src="{% static 'wip_txt1.png' %}" alt="" style="width: 80%; margin-top: 4%;">
+        </div>
+    </body>
+</html>
